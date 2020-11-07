@@ -17,9 +17,7 @@ app.secret_key="momoland"
 
 api = Api(app)
 
-@app.before_request
-def create_table():
-    db.create_all()
+
 
 jwt = JWT(app, authenticate, identity)  # /auth
 
